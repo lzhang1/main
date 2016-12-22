@@ -42,7 +42,8 @@ else
         silent exec 'language en_US'
     else
         " in linux-terminal
-        silent exec 'language en_US.utf8'
+        " silent exec 'language en_US.utf8'
+        silent exec 'language zh_CN.UTF-8'
     endif
 endif
 
@@ -86,7 +87,7 @@ if exists('g:exvim_custom_path')
 else
     let g:ex_tools_path = '~/.vim/tools/'
     set rtp+=~/.vim/bundle/Vundle.vim/
-    call vundle#rc('~/.vim/bundle/')
+    call vundle#rc('~/.vim/bundle')
 endif
 
 " load .vimrc.plugins & .vimrc.plugins.local
@@ -119,6 +120,7 @@ else
     set t_Co=256 " make sure our terminal use 256 color
     let g:solarized_termcolors = 256
 endif
+set rtp+=~/.vim/bundle/vim-colors-solarized
 colorscheme solarized
 " colorscheme exlightgray
 " colorscheme gruvbox
